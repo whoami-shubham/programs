@@ -1,0 +1,24 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main(){
+int n,d,sum=0,x,z=0,ans=0,j,i;
+double y;
+cin>>n;
+for(i=1;i<=n;i++){
+j=i;
+while(j){
+d=j%10;
+sum=sum+d*d;
+j=j/10;
+}
+y=sqrt(sum);
+x=y*1000;
+if((x%10==0)&&(x%100==0)&&(x%1000==0)){
+ans=ans+i;
+}
+sum=0;
+}
+cout<<ans<<endl;
+return 0;
+}

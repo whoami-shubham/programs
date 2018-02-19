@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+int i=4,a;
+double d=4.0,b;
+char s[]="hackerrank";
+char c[100],e[100];
+printf("\nenter integer & double:");
+scanf("%d %lf",&a,&b);
+printf("\nenter string:\n");
+gets(c);
+strcpy(e,s);
+strcat(e,c);
+printf("%d\n %lf\n",i+a,d+b);
+printf("%s",e);
+}

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+read -p "enter your age  " age
+
+if [ $age -ge 18 ]
+then
+  echo "you can drive"
+elif [ $age -eq 17 ]
+then 
+   echo "you can drive next year"
+else
+   echo "you can't drive "
+fi
+
+read -p "enter a number  " num
+if [ $num -ge 0 ]
+then
+  echo "positive number"
+elif [ $num -le -1 ]
+then
+  echo "negative number"
+else
+  echo "please enter valid number next time"
+fi

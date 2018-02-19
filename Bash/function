@@ -1,0 +1,25 @@
+#!/bin/bash
+
+getDate(){
+date
+return
+}
+DATE=$(getDate)
+getDate
+echo $DATE
+name="shubham"
+fun(){
+local name="other"
+echo $name
+}
+fun
+echo $name
+var1=10
+var2=20
+sum(){
+local s=$1
+let s=s+$2
+echo $s
+}
+val=$(sum var1 var2)
+echo $val
