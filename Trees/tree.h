@@ -64,6 +64,26 @@ void inorder(node *root){
 	}
 	return;
 }
+void levelorder(node *root){
+queue<node *>q;
+q.push(root);
+while(!q.empty()){
+	node *temp=q.front();
+	if(temp){
+
+          cout<<temp->data<<" ";
+		if(temp->left){
+                  q.push(temp->left);
+		}
+		if(temp->right){
+                q.push(temp->right);
+		}
+	}
+	q.pop();
+
+}
+cout<<"\n";
+}
 void BST_insert(double value, node **root){
 if((*root)==NULL){
    (*root)=new node(value);
