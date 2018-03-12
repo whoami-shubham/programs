@@ -32,6 +32,12 @@ cout<<"You haven't entered element yet please enter then check !\n";
 else{
 cout<<" max element is  "<<ans<<"  !\n";
 }
-
+delete_tree(head);
+if(head){
+cout<<" error \n";
+}
+else{
+cout<<" deleted \n";
+}
 
 }
