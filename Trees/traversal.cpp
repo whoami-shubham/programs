@@ -25,7 +25,9 @@ cin>>ch;
    cout<<"\n Postorder traversal of tree is : \n";
   cout<<"----------------------------------\n";
   postorder(head);
-
+   cout<<"\n Level order traversal of tree is : \n";
+  cout<<"----------------------------------\n";
+  levelorder(head);
  
 return 0;
 }

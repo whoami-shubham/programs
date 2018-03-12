@@ -84,6 +84,42 @@ while(!q.empty()){
 }
 cout<<"\n";
 }
+int count_nodes(node * root){
+if(root==NULL){
+return 0;
+}
+return ( count_nodes(root->left) + count_nodes(root->right) + 1);
+}
+int search(double value, node * root){
+if(!root){
+return 0;
+}
+if(root->data==value){
+	return 1;
+}
+if( search(value,root->left)){
+	return 1;
+}
+ search(value,root->right);
+
+}
+double find_max(node *root){
+double Max=INT_MIN,left=INT_MIN,right=INT_MIN;
+if(root){
+if(root->data>Max){
+Max=root->data;
+}
+if(root->left){
+left=find_max(root->left);
+}
+if(root->right){
+right=find_max(root->right);
+}
+}
+Max=max(Max,max(left,right));
+
+return Max;
+}
 void BST_insert(double value, node **root){
 if((*root)==NULL){
    (*root)=new node(value);
