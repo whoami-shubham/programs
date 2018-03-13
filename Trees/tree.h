@@ -183,6 +183,7 @@ A.push_back(root->data);
 if((root->left==NULL) && (root->right==NULL)){
 
 	print_Array(A);
+	cout<<"\n";
 }
 else{
 

@@ -30,9 +30,13 @@ cout<<" error \n";
 else{
 cout<<" deleted \n";
 }
-//vector<double>A;
-//print_all_path(head,0,A);
+
 */
+vector<double>A;
+print_all_path(tree1,0,A);
+
+/*
+
 node *tree2=NULL;
 tree2=create(&tree2);
 
@@ -43,6 +47,6 @@ cout<<" Both  tree are equal \n";
 else{
 cout<<" tree are not same \n";
 }
-
+*/
 
 }
