@@ -1,43 +1,48 @@
 #include"tree.h"
 int main(){
-node *head=NULL;
+node *tree1=NULL;
 
 char ch='y';
 double val,e;
 int value,ans;
-do{
-cout<<"enter how many nodes you want to insert in binary tree \n";
-cin>>value;
-cout<<" enter "<<value<<"  values \n";
-for(int i=0;i<value;i++){
-cin>>val;
-insert(val,&head);
-}
-cout<<"do you want to insert again then press any key otherwise press n or q for quit\n";
-cin>>ch;
-}while(ch!='n' && ch!='C' && ch!='q' && ch!='Q');
+tree1=create(&tree1);
 cout<<" which element you want to search\n";
 cin>>e;
-ans=search(e,head);
+ans=search(e,tree1);
 if(ans==1){
 cout<<" element Found !!! \n";
 }
 else{
 cout<<" no such element Exist  !! \n";
 }
-ans=find_max(head);
+ans=find_max(tree1);
 if(ans==INT_MIN){
 cout<<"You haven't entered element yet please enter then check !\n";
 }
 else{
 cout<<" max element is  "<<ans<<"  !\n";
 }
-delete_tree(head);
-if(head){
+/*
+ * delete_tree(tree1);
+if(!tree1){
 cout<<" error \n";
 }
 else{
 cout<<" deleted \n";
 }
+//vector<double>A;
+//print_all_path(head,0,A);
+*/
+node *tree2=NULL;
+tree2=create(&tree2);
+
+if(compair_tree(tree1,tree2)){
+cout<<" Both  tree are equal \n";
+
+}
+else{
+cout<<" tree are not same \n";
+}
+
 
 }

@@ -168,6 +168,95 @@ delete_tree(root->left);
  free(root);
 }
 
+void print_Array(vector<double> v);
+
+/*
+ *print all path
+ */
+void print_all_path(node *root,int length,vector<double> A){
+if(!root){
+return;
+
+}
+A.push_back(root->data);
+
+if((root->left==NULL) && (root->right==NULL)){
+
+	print_Array(A);
+}
+else{
+
+print_all_path(root->left,length,A);
+print_all_path(root->right,length,A);
+}
+
+}
+
+/*
+ * compair two tree
+ *
+ */
+
+bool compair_tree(node *root1, node *root2){
+if(!root1 && !root2){
+return true;
+}
+if(root1 && root2){
+if(root1->data==root2->data){
+return compair_tree(root1->left,root2->left);
+return compair_tree(root1->right,root2->right);
+}
+else{
+	return false;
+}
+}
+
+
+}
+
+
+
+/*
+ *print all elements
+ *
+ */
+ void print_Array(vector<double> A){
+
+for(int i=0;i<A.size();i++){
+cout<<A[i]<<" ";
+}
+
+
+ }
+
+/*
+* create
+*/
+
+
+
+node *create(node **head){
+
+char ch='y';
+double val,e;
+int value,ans;
+do{
+cout<<"enter how many nodes you want to insert in binary tree \n";
+cin>>value;
+cout<<" enter "<<value<<"  values \n";
+for(int i=0;i<value;i++){
+cin>>val;
+insert(val,head);
+}
+cout<<"do you want to insert again then press any key otherwise press n or q for quit\n";
+cin>>ch;
+}while(ch!='n' && ch!='C' && ch!='q' && ch!='Q');
+return *head;
+
+}
+
+
+
 /*
  * insertion in BST
  */
