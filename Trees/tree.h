@@ -214,6 +214,23 @@ else{
 
 
 }
+/*
+ * height of tree
+ */
+ 
+int height(node *root){
+if(root==NULL){
+	return 0;
+}
+
+int left=height(root->left);
+int right=height(root->right);
+int h=max(left,right);
+return h;
+
+
+
+}
 
 
 
