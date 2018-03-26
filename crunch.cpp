@@ -16,7 +16,7 @@ cin>>a>>b;
 cin>>str;
 st_comb(a,b,str);
 }
-else if(str2=="crunch --h"){
+else if(str2=="crunch --h" || str2=="help" || str2 =="crunch --help" ){
 help();
 }
 else{
